@@ -17,7 +17,7 @@ Personally, I think everyone has encountered such a situation where they had to 
 * Faster service - satisfied customer.
 # **Links**
 * [Repository](https://github.com/ionatamanenco/food4you)
-* [Functional Description](https://github.com/ionatamanenco/food4you/wiki/Functional-Description)
-* [Non Functional Requirement](https://github.com/ionatamanenco/food4you/wiki/Non-Functional-Requirement)
+* [Functional Requirements](https://github.com/ionatamanenco/food4you/wiki/Functional-Requirements)
+* [Non Functional Requirements](https://github.com/ionatamanenco/food4you/wiki/Non-Functional-Requirements)
 * [Github Page](https://ionatamanenco.github.io/food4you/)
 * [Backlog](https://github.com/users/ionatamanenco/projects/1)
