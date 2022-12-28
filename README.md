@@ -1,21 +1,9 @@
 # **Introduction**
 Food4you is a generic Web/Mobile application that will help the customers of any restaurant to place their orders without the waiter approaching them.
 
-# **Description**
-It will be an application that will significantly improve the speed and quality of end-to-end service for restaurants and especially customers. The main target of the application are the restaurants who will pay a monthly based subscription fee for the provided service.
+# **Why Food4You?**
+Personally, I think everyone has encountered such a situation where they had to wait a very long time to place an order at a certain restaurant. I want to solve this problem, not for others but for me. If this application will help other users or restaurants, then even better.
 
-***
-### Application will provide different functionality for restaurants and customers
-#### Customer - Mobile Application
-* Scanning a QR code that will be placed on tables in restaurants that are part of our system (getting the menu).
-* Placing an order.
-* Paying for order (Visa/Mastercard, Google Pay, PayPal, Apple Pay).
-* Calling for waiter.
-#### Restaurants - Web Application
-* A board for waiters with all the incoming orders, prepared orders and their status.
-* Waiter can approve (send to the kitchen board) or disapprove (delete) a specific order.
-* A board for the kitchen where the chef can see the dishes ordered, put a timer on a order that will be shown to the customer.
-***
 # **Purpose and Benefits**
 #### Customer
 * Minimum interaction between customer and restaurant staff.
