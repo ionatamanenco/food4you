@@ -18,15 +18,15 @@ It will be an application that will significantly improve the speed and quality 
 ***
 # **Purpose and Benefits**
 #### Customer
-1. Minimum interaction between customer and restaurant staff.
-2. No Romanian language knowledge is required to place an order(for tourists).
-3. Customers won't need to wait for the waiter anymore to place an order.
-4. When visiting in group, everyone can pay only for their food.
+* Minimum interaction between customer and restaurant staff.
+* No Romanian language knowledge is required to place an order(for tourists).
+* Customers won't need to wait for the waiter anymore to place an order.
+* When visiting in group, everyone can pay only for their food.
 #### Restaurants
-1. Minimize the number of workers required to run a restaurant.
-2. Minimize the human error factor (waiter remembering the order or writing it on paper.
-3. Improve the speed of service, more customers served - bigger income.
-4. Faster service - satisfied customer.
+* Minimize the number of workers required to run a restaurant.
+* Minimize the human error factor (waiter remembering the order or writing it on paper.
+* Improve the speed of service, more customers served - bigger income.
+* Faster service - satisfied customer.
 # **Links**
 * [Repository](https://github.com/ionatamanenco/food4you)
 * [Functional Description](https://github.com/ionatamanenco/food4you/wiki/Functional-Description)
