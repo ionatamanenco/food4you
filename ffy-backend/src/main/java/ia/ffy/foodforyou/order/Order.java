@@ -1,6 +1,7 @@
 package ia.ffy.foodforyou.order;
 
-import ia.ffy.foodforyou.login.model.User;
+
+import ia.ffy.foodforyou.login.security.user.User;
 import ia.ffy.foodforyou.menu.Menu;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -23,7 +24,7 @@ import lombok.Setter;
 import java.util.Set;
 
 @Entity
-@Table(name = "order")
+@Table(name = "orders")
 @Getter
 @Setter
 public class Order {

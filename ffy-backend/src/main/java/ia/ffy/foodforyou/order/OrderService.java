@@ -1,7 +1,7 @@
 package ia.ffy.foodforyou.order;
 
-import ia.ffy.foodforyou.login.model.User;
-import ia.ffy.foodforyou.login.repository.UserRepository;
+import ia.ffy.foodforyou.login.security.user.User;
+import ia.ffy.foodforyou.login.security.user.UserRepository;
 import ia.ffy.foodforyou.menu.Menu;
 import ia.ffy.foodforyou.menu.MenuRepository;
 import ia.ffy.foodforyou.util.NotFoundException;
@@ -66,7 +66,7 @@ public class OrderService {
         orderDTO.setUserOrder(order.getUserOrder() == null ? null : order.getUserOrder().getId());
         orderDTO.setOrdersHistory(order.getOrderHistoryMenus() == null ? null : order.getOrderHistoryMenus().stream()
                 .map(Menu::getId)
-                .collect(Collectors.toList()));
+                .toList());
         return orderDTO;
     }
 

@@ -1,7 +1,6 @@
 package ia.ffy.foodforyou.config;
 
 import ia.ffy.foodforyou.util.NotFoundException;
-import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
@@ -57,7 +56,6 @@ public class RestExceptionHandler {
     }
 
     @ExceptionHandler(Throwable.class)
-    @ApiResponse(responseCode = "4xx/5xx", description = "Error")
     public ResponseEntity<ErrorResponse> handleThrowable(final Throwable exception) {
         exception.printStackTrace();
         final ErrorResponse errorResponse = new ErrorResponse();

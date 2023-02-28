@@ -1,7 +1,8 @@
 package ia.ffy.foodforyou.payment_data;
 
-import ia.ffy.foodforyou.login.model.User;
-import ia.ffy.foodforyou.login.repository.UserRepository;
+
+import ia.ffy.foodforyou.login.security.user.User;
+import ia.ffy.foodforyou.login.security.user.UserRepository;
 import ia.ffy.foodforyou.util.NotFoundException;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;

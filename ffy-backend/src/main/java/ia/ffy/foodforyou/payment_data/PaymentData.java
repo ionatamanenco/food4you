@@ -1,6 +1,6 @@
 package ia.ffy.foodforyou.payment_data;
 
-import ia.ffy.foodforyou.login.model.User;
+import ia.ffy.foodforyou.login.security.user.User;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;

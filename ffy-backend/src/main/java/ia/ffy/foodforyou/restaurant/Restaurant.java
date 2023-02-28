@@ -1,6 +1,6 @@
 package ia.ffy.foodforyou.restaurant;
 
-import ia.ffy.foodforyou.login.model.User;
+import ia.ffy.foodforyou.login.security.user.User;
 import ia.ffy.foodforyou.menu.Menu;
 import ia.ffy.foodforyou.sitting_tables.SittingTables;
 import jakarta.persistence.Column;
