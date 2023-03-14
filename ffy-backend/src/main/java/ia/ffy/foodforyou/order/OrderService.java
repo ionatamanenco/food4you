@@ -12,7 +12,6 @@ import org.springframework.stereotype.Service;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Transactional
 @Service
@@ -33,29 +32,29 @@ public class OrderService {
         final List<Order> orders = orderRepository.findAll(Sort.by("id"));
         return orders.stream()
                 .map(order -> mapToDTO(order, new OrderDTO()))
-                .collect(Collectors.toList());
+                .toList();
     }
 
-    public OrderDTO get(final Long id) {
+    public OrderDTO get(final String id) {
         return orderRepository.findById(id)
                 .map(order -> mapToDTO(order, new OrderDTO()))
                 .orElseThrow(NotFoundException::new);
     }
 
-    public Long create(final OrderDTO orderDTO) {
+    public String create(final OrderDTO orderDTO) {
         final Order order = new Order();
         mapToEntity(orderDTO, order);
         return orderRepository.save(order).getId();
     }
 
-    public void update(final Long id, final OrderDTO orderDTO) {
+    public void update(final String id, final OrderDTO orderDTO) {
         final Order order = orderRepository.findById(id)
                 .orElseThrow(NotFoundException::new);
         mapToEntity(orderDTO, order);
         orderRepository.save(order);
     }
 
-    public void delete(final Long id) {
+    public void delete(final String id) {
         orderRepository.deleteById(id);
     }
 
@@ -79,7 +78,7 @@ public class OrderService {
         final List<Menu> ordersHistory = menuRepository.findAllById(
                 orderDTO.getOrdersHistory() == null ? Collections.emptyList() : orderDTO.getOrdersHistory());
         if (ordersHistory.size() != (orderDTO.getOrdersHistory() == null ? 0 : orderDTO.getOrdersHistory().size())) {
-            throw new NotFoundException("One of order history not found!");
+            throw new NotFoundException("One of menu history not found!");
         }
         order.setOrderHistoryMenus(new HashSet<>(ordersHistory));
         return order;

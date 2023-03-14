@@ -11,7 +11,7 @@ import java.util.List;
 @Setter
 public class MenuDTO {
 
-    private Long id;
+    private String id;
 
     @Size(max = 255)
     private String position;

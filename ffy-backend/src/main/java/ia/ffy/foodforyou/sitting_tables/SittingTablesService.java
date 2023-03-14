@@ -7,7 +7,6 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class SittingTablesService {
@@ -25,7 +24,7 @@ public class SittingTablesService {
         final List<SittingTables> sittingTables = sittingTablesRepository.findAll(Sort.by("id"));
         return sittingTables.stream()
                 .map(sittingTable -> mapToDTO(sittingTable, new SittingTablesDTO()))
-                .collect(Collectors.toList());
+                .toList();
     }
 
     public SittingTablesDTO get(final String id) {

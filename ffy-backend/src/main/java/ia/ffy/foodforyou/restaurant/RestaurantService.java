@@ -47,6 +47,10 @@ public class RestaurantService {
         restaurantRepository.deleteById(id);
     }
 
+    public void deleteAll() {
+        restaurantRepository.deleteAll();
+    }
+
     private RestaurantDTO mapToDTO(final Restaurant restaurant, final RestaurantDTO restaurantDTO) {
         restaurantDTO.setId(restaurant.getId());
         restaurantDTO.setCompanyName(restaurant.getCompanyName());

@@ -41,7 +41,7 @@ public class Order {
             strategy = GenerationType.SEQUENCE,
             generator = "primary_sequence"
     )
-    private Long id;
+    private String id;
 
     @Column(nullable = false)
     private String totalPrice;

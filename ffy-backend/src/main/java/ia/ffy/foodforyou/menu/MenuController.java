@@ -34,19 +34,19 @@ public class MenuController {
   }
 
   @GetMapping("/{id}")
-  public ResponseEntity<MenuDTO> getMenu(@PathVariable final Long id) {
+  public ResponseEntity<MenuDTO> getMenu(@PathVariable final String id) {
     LOGGER.info("Received a request to fetch menu with ID [{}].", id);
     return ResponseEntity.ok(menuService.get(id));
   }
 
   @PostMapping
-  public ResponseEntity<Long> createMenu(@RequestBody @Valid final MenuDTO menuDTO) {
+  public ResponseEntity<String> createMenu(@RequestBody @Valid final MenuDTO menuDTO) {
     LOGGER.info("Received a request to create menu with the following data [{}].", menuDTO);
     return new ResponseEntity<>(menuService.create(menuDTO), HttpStatus.CREATED);
   }
 
   @PutMapping("/{id}")
-  public ResponseEntity<Void> updateMenu(@PathVariable final Long id,
+  public ResponseEntity<Void> updateMenu(@PathVariable final String id,
                                          @RequestBody @Valid final MenuDTO menuDTO) {
     LOGGER.info("Received a request to update menu with ID [{}] with the following data [{}].", id, menuDTO);
     menuService.update(id, menuDTO);
@@ -54,7 +54,7 @@ public class MenuController {
   }
 
   @DeleteMapping("/{id}")
-  public ResponseEntity<Void> deleteMenu(@PathVariable final Long id) {
+  public ResponseEntity<Void> deleteMenu(@PathVariable final String id) {
     LOGGER.info("Received a request to delete menu with ID [{}].", id);
     menuService.delete(id);
     return ResponseEntity.noContent().build();

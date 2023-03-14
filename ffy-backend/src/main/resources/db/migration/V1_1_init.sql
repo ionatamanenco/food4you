@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS public.menu_category
     CONSTRAINT menu_category_pkey PRIMARY KEY (menu_id, category_id)
     );
 
-CREATE TABLE IF NOT EXISTS public."order"
+CREATE TABLE IF NOT EXISTS public."menu"
 (
     id bigint NOT NULL,
     status character varying(255) COLLATE pg_catalog."default" NOT NULL,
@@ -123,7 +123,7 @@ ALTER TABLE IF EXISTS public.menu_category
        ON DELETE NO ACTION;
 
 
-ALTER TABLE IF EXISTS public."order"
+ALTER TABLE IF EXISTS public."menu"
     ADD CONSTRAINT fkawcrdlcl8gfr6686hgnsx56sn FOREIGN KEY (user_order_id)
     REFERENCES public."user" (id) MATCH SIMPLE
     ON UPDATE NO ACTION
@@ -132,7 +132,7 @@ ALTER TABLE IF EXISTS public."order"
 
 ALTER TABLE IF EXISTS public.order_history
     ADD CONSTRAINT fk6el0upxftdcwcp1ihndl7dmlq FOREIGN KEY (order_id)
-    REFERENCES public."order" (id) MATCH SIMPLE
+    REFERENCES public."menu" (id) MATCH SIMPLE
     ON UPDATE NO ACTION
        ON DELETE NO ACTION;
 

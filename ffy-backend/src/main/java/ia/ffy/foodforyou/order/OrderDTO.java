@@ -11,7 +11,7 @@ import java.util.List;
 @Setter
 public class OrderDTO {
 
-    private Long id;
+    private String id;
 
     @NotNull
     @Size(max = 255)
@@ -23,6 +23,6 @@ public class OrderDTO {
     @Size(max = 255)
     private String userOrder;
 
-    private List<Long> ordersHistory;
+    private List<String> ordersHistory;
 
 }

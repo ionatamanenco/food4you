@@ -37,26 +37,26 @@ public class MenuService {
                 .collect(Collectors.toList());
     }
 
-    public MenuDTO get(final Long id) {
+    public MenuDTO get(final String id) {
         return menuRepository.findById(id)
                 .map(menu -> mapToDTO(menu, new MenuDTO()))
                 .orElseThrow(NotFoundException::new);
     }
 
-    public Long create(final MenuDTO menuDTO) {
+    public String create(final MenuDTO menuDTO) {
         final Menu menu = new Menu();
         mapToEntity(menuDTO, menu);
         return menuRepository.save(menu).getId();
     }
 
-    public void update(final Long id, final MenuDTO menuDTO) {
+    public void update(final String id, final MenuDTO menuDTO) {
         final Menu menu = menuRepository.findById(id)
                 .orElseThrow(NotFoundException::new);
         mapToEntity(menuDTO, menu);
         menuRepository.save(menu);
     }
 
-    public void delete(final Long id) {
+    public void delete(final String id) {
         menuRepository.deleteById(id);
     }
 
@@ -69,7 +69,7 @@ public class MenuService {
         menuDTO.setRestaurantMenu(menu.getRestaurantMenu() == null ? null : menu.getRestaurantMenu().getId());
         menuDTO.setMenuCategories(menu.getMenuCategoryCategories() == null ? null : menu.getMenuCategoryCategories().stream()
                 .map(Category::getId)
-                .collect(Collectors.toList()));
+                .toList());
         return menuDTO;
     }
 

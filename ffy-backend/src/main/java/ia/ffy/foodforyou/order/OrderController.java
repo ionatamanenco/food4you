@@ -30,26 +30,25 @@ public class OrderController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<OrderDTO> getOrder(@PathVariable final Long id) {
+    public ResponseEntity<OrderDTO> getOrder(@PathVariable final String id) {
         return ResponseEntity.ok(orderService.get(id));
     }
 
     @PostMapping
-    public ResponseEntity<Long> createOrder(@RequestBody @Valid final OrderDTO orderDTO) {
+    public ResponseEntity<String> createOrder(@RequestBody @Valid final OrderDTO orderDTO) {
         return new ResponseEntity<>(orderService.create(orderDTO), HttpStatus.CREATED);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Void> updateOrder(@PathVariable final Long id,
+    public ResponseEntity<Void> updateOrder(@PathVariable final String id,
                                             @RequestBody @Valid final OrderDTO orderDTO) {
         orderService.update(id, orderDTO);
         return ResponseEntity.ok().build();
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteOrder(@PathVariable final Long id) {
+    public ResponseEntity<Void> deleteOrder(@PathVariable final String id) {
         orderService.delete(id);
         return ResponseEntity.noContent().build();
     }
-
 }

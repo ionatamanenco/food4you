@@ -36,7 +36,7 @@ public class Menu {
             strategy = GenerationType.SEQUENCE,
             generator = "primary_sequence"
     )
-    private Long id;
+    private String id;
 
     @Column
     private String position;

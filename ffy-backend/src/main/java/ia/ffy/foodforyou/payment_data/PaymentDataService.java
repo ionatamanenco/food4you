@@ -1,6 +1,5 @@
 package ia.ffy.foodforyou.payment_data;
 
-
 import ia.ffy.foodforyou.login.security.user.User;
 import ia.ffy.foodforyou.login.security.user.UserRepository;
 import ia.ffy.foodforyou.util.NotFoundException;
@@ -8,7 +7,6 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class PaymentDataService {
@@ -26,7 +24,7 @@ public class PaymentDataService {
         final List<PaymentData> paymentsData = paymentDataRepository.findAll(Sort.by("id"));
         return paymentsData.stream()
                 .map(paymentData -> mapToDTO(paymentData, new PaymentDataDTO()))
-                .collect(Collectors.toList());
+                .toList();
     }
 
     public PaymentDataDTO get(final String id) {

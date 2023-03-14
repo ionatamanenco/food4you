@@ -7,7 +7,6 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class CategoryService {
@@ -24,7 +23,7 @@ public class CategoryService {
         final List<Category> categories = categoryRepository.findAll(Sort.by("id"));
         return categories.stream()
                 .map(category -> mapToDTO(category, new CategoryDTO()))
-                .collect(Collectors.toList());
+                .toList();
     }
 
     public CategoryDTO get(final String id) {

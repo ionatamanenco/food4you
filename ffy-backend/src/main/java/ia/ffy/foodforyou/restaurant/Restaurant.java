@@ -9,7 +9,9 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Set;
@@ -17,6 +19,8 @@ import java.util.Set;
 @Entity
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Restaurant {
 
     @Id
@@ -47,4 +51,6 @@ public class Restaurant {
     @OneToMany(mappedBy = "restaurantTables")
     private Set<SittingTables> restaurantTablesSittingTables;
 
+    public Restaurant(String s, String s1, String logo, String fast_food) {
+    }
 }
